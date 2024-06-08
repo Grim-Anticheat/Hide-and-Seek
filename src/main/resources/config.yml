@@ -201,6 +201,18 @@ glow:
   material: "SNOWBALL"
   model-data: 0
 
+changeblock:
+  enabled: true
+  stackable: true
+  name: "Change Block"
+  lore: [
+    "Right click to",
+    "change your selected",
+    "Block"
+  ]
+  material: "GRASS_BLOCK"
+  model-data: 0
+
 # This has the same glow effect as the glow powerup in that all seekers positions get
 # shown to hiders. But enabling this force disables the powerup, and instead always shows
 # the seekers positions to the hiders. Good for small maps. Since the glow effect wasn't added

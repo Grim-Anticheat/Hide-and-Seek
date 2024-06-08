@@ -10,6 +10,7 @@ import dev.tylerm.khs.command.map.blockhunt.blocks.Remove;
 import dev.tylerm.khs.command.map.set.*;
 import dev.tylerm.khs.configuration.*;
 import dev.tylerm.khs.game.*;
+import dev.tylerm.khs.game.events.Blockchange;
 import dev.tylerm.khs.game.listener.*;
 import dev.tylerm.khs.game.util.Status;
 import dev.tylerm.khs.util.PAPIExpansion;
@@ -196,6 +197,7 @@ public class Main extends JavaPlugin implements Listener {
 		getServer().getPluginManager().registerEvents(new PlayerHandler(), this);
 		getServer().getPluginManager().registerEvents(new RespawnHandler(), this);
 		getServer().getPluginManager().registerEvents(new WorldInteractHandler(), this);
+		getServer().getPluginManager().registerEvents(new Blockchange(), this);
 	}
 
 	private void updateVersion(){

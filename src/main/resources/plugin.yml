@@ -1,7 +1,9 @@
 name: KenshinsHideAndSeek
 main: dev.tylerm.khs.Main
-version: 1.7.7
-author: KenshinEto
+version: '${project.version}'
+authors:
+  - KenshinEto
+  - Bensonheimer992
 load: STARTUP
 api-version: 1.13
 depend: [ProtocolLib]

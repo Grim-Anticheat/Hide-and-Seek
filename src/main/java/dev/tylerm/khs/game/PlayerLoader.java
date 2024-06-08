@@ -120,6 +120,9 @@ public class PlayerLoader {
             if (glowEnabled) {
                 player.getInventory().addItem(glowPowerupItem);
             }
+            if (blockEnabled) {
+                player.getInventory().setItem(8, changeBlockItem);
+            }
         }
     }
 
