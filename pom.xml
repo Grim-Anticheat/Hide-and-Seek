@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"><modelVersion>4.0.0</modelVersion>
     <groupId>dev.tylerm</groupId>
     <artifactId>KenshinsHideAndSeek</artifactId>
-    <version>1.7.8</version>
+    <version>1.7.9</version>
     <name>Hide and Seek Plugin</name>
 
     <properties>
@@ -9,6 +9,12 @@
     </properties>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <defaultGoal>clean install</defaultGoal>
         <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
@@ -72,7 +78,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-
         </plugins>
 
     </build>
