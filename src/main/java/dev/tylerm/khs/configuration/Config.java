@@ -144,7 +144,9 @@ public class Config {
 				config.getString("exit.world"),
 				config.getInt("exit.x"),
 				config.getInt("exit.y"),
-				config.getInt("exit.z")
+				config.getInt("exit.z"),
+				config.getFloat("exit.yaw"),
+				config.getFloat("exit.pitch")
 		);
 		mapSaveEnabled = config.getBoolean("mapSaveEnabled");
 
