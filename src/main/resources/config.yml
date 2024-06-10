@@ -201,6 +201,11 @@ glow:
   material: "SNOWBALL"
   model-data: 0
 
+# The Change Block item allows the Hider to change the Hiding Block while
+# the Game is running. You can disable this item with the enabled Option.
+# With the Name Option you can change the Item Name and with the lore option
+# you can change the Item lore.
+
 changeblock:
   enabled: true
   stackable: true
@@ -347,4 +352,6 @@ exit:
   x: 0
   y: 0
   z: 0
+  yaw: 0
+  pitch: 0
   world: "world"
