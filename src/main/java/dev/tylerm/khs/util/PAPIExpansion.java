@@ -7,10 +7,12 @@ import dev.tylerm.khs.database.util.PlayerInfo;
 import dev.tylerm.khs.game.Board;
 import dev.tylerm.khs.game.util.Status;
 
+import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Arrays;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -47,7 +49,7 @@ public class PAPIExpansion extends PlaceholderExpansion  {
         Status status = Main.getInstance().getGame().getStatus();
         Board board = Main.getInstance().getBoard();
 
-        System.out.println(args);
+        Bukkit.getLogger().info(Arrays.toString(args));
 
         if (args.length < 1) return null;
 
