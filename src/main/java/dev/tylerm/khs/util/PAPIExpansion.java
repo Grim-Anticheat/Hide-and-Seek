@@ -1,5 +1,7 @@
 package dev.tylerm.khs.util;
 
+import dev.tylerm.khs.configuration.Localization;
+import dev.tylerm.khs.configuration.LocalizationString;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import dev.tylerm.khs.Main;
 import dev.tylerm.khs.database.Database;
@@ -9,6 +11,8 @@ import dev.tylerm.khs.game.util.Status;
 
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
+import org.bukkit.scoreboard.Team;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -52,6 +56,16 @@ public class PAPIExpansion extends PlaceholderExpansion  {
         Bukkit.getLogger().info(Arrays.toString(args));
 
         if (args.length < 1) return null;
+
+        if (args.length == 1 && args[0].equals("team")) {
+            if (board.isHider((Player) player)) {
+                LocalizationString hider = Localization.message("HIDER_TEAM_NAME");
+                return hider.toString();
+            } else if (board.isSeeker((Player) player)) {
+                LocalizationString seeker = Localization.message("SEEKER_TEAM_NAME");
+                return seeker.toString();
+            }
+        }
 
         if (args.length == 1 && args[0].equals("hiders")) {
             if (!board.containsUUID(player.getUniqueId())) {
