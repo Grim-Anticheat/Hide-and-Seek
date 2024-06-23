@@ -58,12 +58,19 @@ public class PAPIExpansion extends PlaceholderExpansion  {
         if (args.length < 1) return null;
 
         if (args.length == 1 && args[0].equals("team")) {
-            if (board.isHider((Player) player)) {
-                LocalizationString hider = Localization.message("HIDER_TEAM_NAME");
-                return hider.toString();
-            } else if (board.isSeeker((Player) player)) {
-                LocalizationString seeker = Localization.message("SEEKER_TEAM_NAME");
-                return seeker.toString();
+
+            if (status.equals(Status.PLAYING)) {
+                if (board.isHider((Player) player)) {
+                    LocalizationString hider = Localization.message("HIDER_TEAM_NAME");
+                    return hider.toString();
+                } else if (board.isSeeker((Player) player)) {
+                    LocalizationString seeker = Localization.message("SEEKER_TEAM_NAME");
+                    return seeker.toString();
+                } else {
+                    return " ";
+                }
+            } else {
+                return " ";
             }
         }
 
